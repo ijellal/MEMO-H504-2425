@@ -1,0 +1,26 @@
+expname = plenoptic_test_v2
+basedir = ./tsinghua_2/logs
+#
+datadir = ./tsinghua_2/micro-images
+dataset_type = plenoptic
+
+
+# Chemin des données:
+camera_file = ./param/tsinghua_cameras_2.txt
+image_file = ./param/tsinghua_images_2.txt
+images_folder = ./color/Tsinghua_2
+micro_images_folder = ./tsinghua_2/micro-images
+test_set = ./tsinghua_2/output/test
+train_set = ./tsinghua_2/output/train
+indices_file = ./tsinghua_2/output/indices.txt
+
+
+N_rand = 1024
+N_samples = 64
+N_importance = 64
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
+# rays_d[..., 0] *= -1 (get_rays_pleno)    : False
+# dirs = torch.stack([-(i-K[0][2])/K[0][0] : False

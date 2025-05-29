@@ -1,0 +1,26 @@
+expname = plenoptic_test
+basedir = ./logs
+#
+datadir = ./micro-images
+dataset_type = plenoptic
+
+
+# Chemin des données:
+camera_file = ./param/cameras.txt
+image_file = ./param/images.txt
+images_folder = ./color/NagoyaFujita
+micro_images_folder = ./micro-images
+test_set = ./output/test
+train_set = ./output/train
+indices_file = ./output/indices.txt
+
+
+N_rand = 1024
+N_samples = 64
+N_importance = 64
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
+# rays_d[..., 0] *= -1 (get_rays_pleno)    : True
+# dirs = torch.stack([-(i-K[0][2])/K[0][0] : False

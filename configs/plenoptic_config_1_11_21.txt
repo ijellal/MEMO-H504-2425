@@ -1,0 +1,27 @@
+expname = plenoptic_test_v20
+basedir = ./1_11_21im/logs
+#
+datadir = ./1_11_21im/micro-images
+dataset_type = plenoptic
+
+
+# Chemin des données:
+camera_file = ./param/cameras.txt
+image_file = ./param/images.txt
+images_folder = ./color/NagoyaFujita
+micro_images_folder = ./1_11_21im/micro-images
+test_set = ./1_11_21im/output/test
+train_set = ./1_11_21im/output/train
+indices_file = ./1_11_21im/output/indices.txt
+
+
+N_rand = 1024
+N_samples = 64
+N_importance = 64
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
+# rays_d[..., 0] *= -1 (get_rays_pleno)    : False (ne fonctionne pas bien quand on # inverse ici, il faut inversé dans Tm)
+# dirs = torch.stack([-(i-K[0][2])/K[0][0] : True
+# Tm_4x4_v2 + inverse axe x et y + new archi + new loss

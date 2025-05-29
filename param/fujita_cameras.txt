@@ -1,0 +1,4 @@
+# Camera list with one line of data per camera:
+# CAMERA_ID, MODEL, WIDTH, HEIGHT, PARAMS[]: mla center x, mla center y, mla rotation, mla diameter, pix, F, M, s, ml center x, ml center y
+# Number of cameras: 1
+1 PLENOPTIC 2048 2048 1037.04 1044.35 1.5708 23.2023 0.0055 16 -0.3 0.2 0 0

@@ -1,0 +1,30 @@
+expname = plenoptic_test_v14
+basedir = ./1im/logs
+#
+datadir = ./1im/micro-images
+dataset_type = plenoptic
+
+
+# Chemin des données:
+camera_file = ./param/fujita_cameras.txt
+image_file = ./param/fujita_images.txt
+images_folder = ./color/NagoyaFujita_1im
+micro_images_folder = ./1im/micro-images
+test_set = ./1im/output/test
+train_set = ./1im/output/train
+indices_file = ./1im/output/indices.txt
+
+
+N_rand = 1024
+N_samples = 64
+N_importance = 64
+
+use_viewdirs = True
+raw_noise_std = 1e0
+
+# rays_d[..., 0] *= -1 (get_rays_pleno)    : True
+# dirs = torch.stack([-(i-K[0][2])/K[0][0] : False
+# test le code en com dans la class nerf
+# Test avec loss function modifiée
+# mm chose que v12 mais on change le calcul du psnr dan render_path_pleno
+# old archi
